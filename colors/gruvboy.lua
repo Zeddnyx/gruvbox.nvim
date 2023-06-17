@@ -1,1 +1,1 @@
-require("gruvboy").load()
+require("gruvbox").load()
