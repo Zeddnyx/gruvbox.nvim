@@ -1,5 +1,6 @@
 local M = {
 	-- dark
+	dark0_hard = "#1D2021",
 	dark0 = "#282828",
 	dark1 = "#3c3836",
 	dark2 = "#504945",
@@ -10,23 +11,23 @@ local M = {
 	light2 = "#bdae93",
 	light3 = "#a89984",
 	-- normal color
-	red = "#cc241d",
-	green = "#98971a",
+	red =    "#E74633",
+	green =  "#98971a",
 	yellow = "#D69820",
-	blue = "#458588",
-	cyan = "#3AAAB6",
+	blue =   "#70A8B4",
+	cyan =   "#3AAAB6",
 	purple = "#b16286",
-	aqua = "#427b58",
-	gray = "#928374",
+	aqua =   "#427b58",
+	gray =   "#928374",
 	orange = "#fe8019",
 	-- bright color
-	bright_red = "#fb4934",
-	bright_green = "#b8bb26",
+	bright_red =    "#fb4934",
+	bright_green =  "#b8bb26",
 	bright_yellow = "#fabd2f",
-	bright_blue = "#83a598",
+	bright_blue =   "#83a598",
 	bright_purple = "#d3869b",
-	bright_aqua = "#8ec07c",
-	bright_gray = "#a89984",
+	bright_aqua =   "#8ec07c",
+	bright_gray =   "#a89984",
 	bright_orange = "#fe8019",
 }
 return M

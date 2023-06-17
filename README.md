@@ -1,24 +1,20 @@
-![gruvboy images](./assets/header.png)
-
-<hr>
-
 My own variation of gruvbox colorscheme made with :love:.
 
 # Screenshot
 
 ### dark mode
 
-![dark mode](./assets/dark-mode.png)
+![dark mode](./assets/gruvbox.png)
 
 # Installation
 
-how to to install gruvboy.nvim with packer.nvim or vim-plug
+how to to install gruvbox.nvim with packer.nvim or vim-plug
 
 [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```
 use {
-  'mnabila/gruvboy.nvim',
+  'Zeddnyx/gruvbox.nvim',
 }
 
 ```
@@ -26,7 +22,7 @@ use {
 [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```
-Plug 'mnabila/gruvboy.nvim'
+Plug 'Zeddnyx/gruvbox.nvim'
 ```
 
 now set gruvboy.nvim as your default colorscheme in vimrc
@@ -34,13 +30,13 @@ now set gruvboy.nvim as your default colorscheme in vimrc
 if using init.lua
 
 ```
-vim.cmd("colorscheme gruvboy")
+vim.cmd("colorscheme gruvbox")
 ```
 
 if using init.vim
 
 ```
-colorscheme gruvboy
+colorscheme gruvbox
 ```
 
 # License
