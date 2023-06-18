@@ -4,7 +4,7 @@ My own variation of gruvbox colorscheme made with :love:.
 
 ### dark mode
 
-![dark mode](./assets/gruvbox.png)
+<!-- ![dark mode](./assets/gruvbox.png) -->
 
 # Installation
 

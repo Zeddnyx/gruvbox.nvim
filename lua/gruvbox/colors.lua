@@ -1,7 +1,6 @@
 local M = {
 	-- dark
-	dark0_hard = "#1D2021",
-	dark0 = "#282828",
+	dark0 = "#1D2021",
 	dark1 = "#3c3836",
 	dark2 = "#504945",
 	dark3 = "#665c54",
