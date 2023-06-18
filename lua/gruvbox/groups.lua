@@ -13,7 +13,7 @@ local M = {
 	CursorLine = { link = "CursorColumn" },
 	Directory = { fg = c.bright_green, bold = true },
 	DiffAdd = { fg = c.bright_green },
-	DiffChange = { fg = c.aqua },
+	DiffChange = { fg = c.cyan },
 	DiffDelete = { fg = c.red },
 	DiffText = { fg = c.yellow },
 	EndOfBuffer = { link = "ColorColumn" },
@@ -76,7 +76,7 @@ local M = {
 	--See :h group-name
 	Comment = { fg = c.gray },
 	Constant = { fg = c.purple },
-	String = { fg = c.bright_green},
+	String = { fg = c.bright_green },
 	Character = { fg = c.purple },
 	Number = { fg = c.purple },
 	Boolean = { fg = c.purple },
@@ -87,26 +87,35 @@ local M = {
 	Conditional = { fg = c.red },
 	Repeat = { fg = c.red },
 	Label = { fg = c.red },
-	Operator = { fg = c.bright_green },
+	Operator = { fg = c.bright_red },
 	Keyword = { fg = c.red },
 	Exception = { fg = c.purple },
 	PreProc = { fg = c.bright_green },
-	Include = { fg = c.bright_green },
+	Include = { fg = c.bright_aqua }, -- import text color
 	Define = { fg = c.bright_green },
 	Macro = { fg = c.bright_green },
 	PreCondit = { fg = c.bright_green },
-	Type = { fg = c.yellow },
+	Type = { fg = c.bright_yellow },
 	StorageClass = { fg = c.orange },
-	Structure = { fg = c.bright_yellow},
+	Structure = { fg = c.bright_yellow },
 	TypeDef = { fg = c.yellow },
 	Special = { fg = c.orange },
 	SpecialChar = { fg = c.purple },
-	Tag = { fg = c.red },
 	SpecialComment = { fg = c.red },
 	Debug = { fg = c.red },
 	Underline = { underline = true },
 	Error = { fg = c.red, undercurl = true },
 	Todo = { fg = c.dark0, bg = c.light0 },
+	Underlined = { fg = c.bright_aqua, underline = true }, -- text link html
+	Attribute = { fg = c.bright_yellow }, -- attribute html
+	Tag = { fg = c.red }, -- tag html
+
+	--See :h html
+	htmlTag = { fg = c.bright_red },
+	htmlEndTag = { fg = c.bright_aqua },
+	htmlString = { fg = c.bright_green },
+	htmlLink = { fg = c.bright_aqua },
+
 	--
 	--See :h lsp-highlight
 	--LspReferenceText={},
@@ -114,10 +123,10 @@ local M = {
 	--LspReferenceWrite={},
 	--
 	--See :h diagnostic-highlights
-	DiagnosticError = { fg = c.red, undercurl = true },
-	DiagnosticWarn = { fg = c.yellow, underline = true },
-	DiagnosticInfo = { fg = c.blue, underline = true },
-	DiagnosticHint = { fg = c.aqua, underline = true },
+	DiagnosticError = { fg = c.red },
+	DiagnosticWarn = { fg = c.yellow },
+	DiagnosticInfo = { fg = c.blue },
+	DiagnosticHint = { fg = c.bright_aqua },
 	DiagnosticSignError = { fg = c.red },
 	DiagnosticSignWarn = { fg = c.yellow },
 	DiagnosticSignInfo = { fg = c.blue },
@@ -131,8 +140,8 @@ local M = {
 	["@text.literal"] = { link = "Comment" },
 	["@text.reference"] = { link = "Identifier" },
 	["@text.title"] = { link = "Title" },
-	["@text.uri"] = { link = "Underlined" },
-	["@text.underline"] = { link = "Underlined" },
+	["@text.uri"] = { link = "Underlined", fg = c.bright_aqua },
+	["@text.underline"] = { link = "Underlined", fg = c.bright_aqua },
 	["@text.todo"] = { link = "Todo" },
 	["@comment"] = { link = "Comment" },
 	["@punctuation"] = { link = "Delimiter" },
@@ -173,6 +182,8 @@ local M = {
 	["@preproc"] = { link = "PreProc" },
 	["@debug"] = { link = "Debug" },
 	["@tag"] = { link = "Tag" },
+	["@tag.attribute"] = { link = "Attribute" },
+	["@tag.delimiter"] = { link = "Tag" },
 	--
 	--See :h lsp-semantic-highlight
 	["@lsp.type.class"] = { link = "Structure" },
@@ -203,7 +214,7 @@ local M = {
 	GitSignDelete = { link = "DiffDelete" },
 	--
 	--See telescope.nvim/plugin/telescope.lua
-	TelescopeSelection = { bg = c.dark1, fg = c.light0},
+	TelescopeSelection = { bg = c.dark1, fg = c.light0 },
 	TelescopeSelectionCaret = { bg = c.light3, fg = c.dark0 },
 	TelescopeMultiSelection = { fg = c.light0, bold = true },
 	TelescopeNormal = { link = "NormalFloat" },
@@ -218,45 +229,43 @@ local M = {
 	TranslatorBorder = { link = "FloatBorder" },
 	--
 	--See h nvm-tree.nvim/lua/nvim-tree/colors.lua
-  NvimTreeFolderIcon = { fg = c.yellow },
-  NvimTreeFolderName = { fg = c.bright_green},
-  NvimTreeFileName = { fg = c.light0 },
-  NvimTreeImageFileIcon = { fg = c.purple },
-  NvimTreeImageFileIconName = { fg = c.purple },
-  NvimTreeOpenedFileIcon = { fg = c.light0},
-  NvimTreeOpenedFileName = { fg = c.light0},
-  NvimTreeOpenedFileIcon = { fg = c.light0},
-  NvimTreeOpenedFileName = { fg = c.light0},
+	NvimTreeFolderIcon = { fg = c.yellow },
+	NvimTreeFolderName = { fg = c.bright_green },
+	NvimTreeFileName = { fg = c.light0 },
+	NvimTreeImageFileIcon = { fg = c.purple },
+	NvimTreeImageFileIconName = { fg = c.purple },
+	NvimTreeOpenedFileIcon = { fg = c.light0 },
+	NvimTreeOpenedFileName = { fg = c.light0 },
+	NvimTreeOpenedFileIcon = { fg = c.light0 },
+	NvimTreeOpenedFileName = { fg = c.light0 },
 
-  NvimTreeGitDirty = { fg = c.orange },
-  NvimTreeGitNew = { fg = c.bright_green },
-  NvimTreeGitDeleted = { fg = c.red },
-  NvimTreeGitRenamed = { fg = c.orange },
-  NvimTreeGitIgnored = { fg = c.purple },
-  NvimTreeGitStaged = { fg = c.bright_green },
-  NvimTreeGitMerge = { fg = c.orange },
-  NvimTreeGitUnstaged = { fg = c.red },
-  NvimTreeGitUnmerged = { fg = c.orange },
+	NvimTreeGitDirty = { fg = c.orange },
+	NvimTreeGitNew = { fg = c.bright_green },
+	NvimTreeGitDeleted = { fg = c.red },
+	NvimTreeGitRenamed = { fg = c.orange },
+	NvimTreeGitIgnored = { fg = c.purple },
+	NvimTreeGitStaged = { fg = c.bright_green },
+	NvimTreeGitMerge = { fg = c.orange },
+	NvimTreeGitUnstaged = { fg = c.red },
+	NvimTreeGitUnmerged = { fg = c.orange },
 
-  --See barbar.nvim
-  BufferCurrent = { bg = c.dark0, fg = c.light0 },
-  BufferCurrentIndex = { bg = c.dark3, fg = c.light0 },
-  BufferCurrentMod = { bg = c.dark0, fg = c.red},
-  BufferCurrentSign = { bg = c.dark0, fg = c.light0 },
-  BufferCurrentTarget = { bg = c.dark0, fg = c.orange },
-  BufferVisible = { bg = c.dark0, fg = c.light0 },
-  BufferVisibleIndex = { bg = c.dark0, fg = c.light0 },
-  BufferVisibleMod = { bg = c.dark0, fg = c.red},
-  BufferVisibleSign = { bg = c.dark0, fg = c.light0 },
-  BufferVisibleTarget = { bg = c.dark0, fg = c.orange },
-  BufferInactive = { bg = c.dark2, fg = c.light3},
-  BufferInactiveIndex = { bg = c.dark2, fg = c.dark3 },
-  BufferInactiveMod = { bg = c.dark2, fg = c.red},
-  BufferInactiveSign = { bg = c.dark0, fg = c.light0 },
+	--See barbar.nvim
+	BufferCurrent = { bg = c.dark0, fg = c.light0 },
+	BufferCurrentIndex = { bg = c.dark3, fg = c.light0 },
+	BufferCurrentMod = { bg = c.dark0, fg = c.red },
+	BufferCurrentSign = { bg = c.dark0, fg = c.light0 },
+	BufferCurrentTarget = { bg = c.dark0, fg = c.orange },
+	BufferVisible = { bg = c.dark0, fg = c.light0 },
+	BufferVisibleIndex = { bg = c.dark0, fg = c.light0 },
+	BufferVisibleMod = { bg = c.dark0, fg = c.red },
+	BufferVisibleSign = { bg = c.dark0, fg = c.light0 },
+	BufferVisibleTarget = { bg = c.dark0, fg = c.orange },
+	BufferInactive = { bg = c.dark2, fg = c.light3 },
+	BufferInactiveIndex = { bg = c.dark2, fg = c.dark3 },
+	BufferInactiveMod = { bg = c.dark2, fg = c.red },
+	BufferInactiveSign = { bg = c.dark0, fg = c.light0 },
 
-  --See lspsaga.nvim
-  SagaWinbarFolder = { bg = c.dark0, fg = c.yellow},
-
-
+	--See lspsaga.nvim
+	SagaWinbarFolder = { bg = c.dark0, fg = c.yellow },
 }
 return M
