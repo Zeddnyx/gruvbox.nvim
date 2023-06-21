@@ -4,9 +4,9 @@ local M = {
 	--
 	--See :h highlight-groups
 	ColorColumn = { fg = c.light0 },
-	Conceal = { fg = c.light1 },
-	CurSearch = { bg = c.light0, fg = c.dark0 },
-	Cursor = { bg = c.light0, fg = c.dark0 },
+	Conceal = { fg = c.light0 },
+	CurSearch = { bg = c.blue, fg = c.dark0 },
+	Cursor = { bg = c.light1, fg = c.dark0 },
 	ICursor = { link = "Cursor" },
 	CursorIM = { link = "Cursor" },
 	CursorColumn = { bg = c.dark1 },
@@ -239,15 +239,15 @@ local M = {
 	NvimTreeOpenedFileIcon = { fg = c.light0 },
 	NvimTreeOpenedFileName = { fg = c.light0 },
 
-	NvimTreeGitDirty = { fg = c.orange },
+	NvimTreeGitDirty = { fg = c.bright_red},
 	NvimTreeGitNew = { fg = c.bright_green },
-	NvimTreeGitDeleted = { fg = c.red },
-	NvimTreeGitRenamed = { fg = c.orange },
+	NvimTreeGitDeleted = { fg = c.bright_red },
+	NvimTreeGitRenamed = { fg = c.blue},
 	NvimTreeGitIgnored = { fg = c.purple },
 	NvimTreeGitStaged = { fg = c.bright_green },
-	NvimTreeGitMerge = { fg = c.orange },
-	NvimTreeGitUnstaged = { fg = c.red },
-	NvimTreeGitUnmerged = { fg = c.orange },
+	NvimTreeGitMerge = { fg = c.green},
+	NvimTreeGitUnstaged = { fg = c.bright_red },
+	NvimTreeGitUnmerged = { fg = c.bright_red},
 
 	--See barbar.nvim
 	BufferCurrent = { bg = c.dark0, fg = c.light0 },
