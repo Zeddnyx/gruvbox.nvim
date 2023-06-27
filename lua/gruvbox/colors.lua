@@ -1,4 +1,6 @@
 local M = {
+  -- transparent 
+  transparent = "#ffffff0",
 	-- dark
 	dark0 = "#1D2021",
 	dark1 = "#3c3836",

@@ -65,7 +65,7 @@ local M = {
 	TabLineFill = { link = "TabLine" },
 	TabLineSel = { bg = c.dark1 },
 	Title = { bold = true },
-	Visual = { bg = c.light1, fg = c.dark0 },
+	Visual = { bg = c.blue, fg = c.dark0 },
 	VisualNOS = { bg = c.dark1 },
 	WarningMsg = { fg = c.yellow },
 	Whitespace = { fg = c.dark1 },
@@ -135,6 +135,10 @@ local M = {
 	DiagnosticVirtualTextWarn = { fg = c.yellow },
 	DiagnosticVirtualTextInfo = { fg = c.blue },
 	DiagnosticVirtualTextHint = { fg = c.aqua },
+  DiagnosticLineNrError = { fg = c.red },
+  DiagnosticLineNrWarn = { fg = c.yellow },
+  DiagnosticLineNrInfo = { fg = c.blue },
+  DiagnosticLineNrHint = { fg = c.aqua },
 	--
 	--See :h treesitter-highlight-groups
 	["@text.literal"] = { link = "Comment" },
@@ -233,6 +237,8 @@ local M = {
 	NvimTreeFolderName = { fg = c.bright_green },
   NvimTreeFolderEmpty = { fg = c.gray},
 	NvimTreeFileName = { fg = c.light0 },
+  NvimTreeArrow = { fg = c.green},
+  NvimTreeArrowOpen = { fg = c.green},
 
 	NvimTreeGitDirty = { fg = c.bright_red},
 	NvimTreeGitNew = { fg = c.bright_green },
@@ -243,6 +249,7 @@ local M = {
 	NvimTreeGitMerge = { fg = c.green},
 	NvimTreeGitUnstaged = { fg = c.bright_red },
 	NvimTreeGitUnmerged = { fg = c.bright_red},
+  NvimTreeGitEdited = { fg = c.bright_red },
 
 	--See barbar.nvim
 	BufferCurrent = { bg = c.dark0, fg = c.light0 },
