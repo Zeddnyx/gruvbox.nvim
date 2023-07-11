@@ -89,6 +89,7 @@ local M = {
 	Label = { fg = c.red },
 	Operator = { fg = c.bright_red },
 	Keyword = { fg = c.red },
+  KeywordFunction = { fg = c.bright_aqua },
 	Exception = { fg = c.purple },
 	PreProc = { fg = c.bright_green },
 	Include = { fg = c.bright_aqua }, -- import text color
@@ -115,6 +116,9 @@ local M = {
 	htmlEndTag = { fg = c.bright_aqua },
 	htmlString = { fg = c.bright_green },
 	htmlLink = { fg = c.bright_aqua },
+  tsxTag = { fg = c.bright_yellow},
+  tsxTagName = { fg = c.bright_yellow},
+
 
 	--
 	--See :h lsp-highlight
@@ -127,7 +131,7 @@ local M = {
 	DiagnosticWarn = { fg = c.yellow },
 	DiagnosticInfo = { fg = c.blue },
 	DiagnosticHint = { fg = c.bright_aqua },
-	DiagnosticSignError = { fg = c.red },
+	DiagnosticSignError = { fg = c.light0 },
 	DiagnosticSignWarn = { fg = c.yellow },
 	DiagnosticSignInfo = { fg = c.blue },
 	DiagnosticSignHint = { fg = c.aqua },
@@ -135,10 +139,10 @@ local M = {
 	DiagnosticVirtualTextWarn = { fg = c.yellow },
 	DiagnosticVirtualTextInfo = { fg = c.blue },
 	DiagnosticVirtualTextHint = { fg = c.aqua },
-  DiagnosticLineNrError = { fg = c.red },
-  DiagnosticLineNrWarn = { fg = c.yellow },
-  DiagnosticLineNrInfo = { fg = c.blue },
-  DiagnosticLineNrHint = { fg = c.aqua },
+	DiagnosticLineNrError = { fg = c.light0, bg = c.red },
+	DiagnosticLineNrWarn = { fg = c.light0, bg = c.yellow },
+	DiagnosticLineNrInfo = { fg = c.light0, bg = c.blue },
+	DiagnosticLineNrHint = { fg = c.light0, bg = c.aqua },
 	--
 	--See :h treesitter-highlight-groups
 	["@text.literal"] = { link = "Comment" },
@@ -174,7 +178,8 @@ local M = {
 	["@repeat"] = { link = "Repeat" },
 	["@label"] = { link = "Label" },
 	["@operator"] = { link = "Operator" },
-	["@keyword"] = { link = "Keyword" },
+	["@keyword"] = { link = "Keyword" }, -- variable, export default 
+	["@keyword.function"] = { link = "KeywordFunction" }, -- function
 	["@exception"] = { link = "Exception" },
 	["@variable"] = { fg = c.light0 },
 	["@type"] = { link = "Type" },
@@ -233,23 +238,23 @@ local M = {
 	TranslatorBorder = { link = "FloatBorder" },
 	--
 	--See h nvm-tree.nvim/lua/nvim-tree/colors.lua
-	NvimTreeFolderIcon = { fg = c.bright_green},
+	NvimTreeFolderIcon = { fg = c.bright_green },
 	NvimTreeFolderName = { fg = c.bright_green },
-  NvimTreeFolderEmpty = { fg = c.gray},
+	NvimTreeFolderEmpty = { fg = c.gray },
 	NvimTreeFileName = { fg = c.light0 },
-  NvimTreeArrow = { fg = c.green},
-  NvimTreeArrowOpen = { fg = c.green},
+	NvimTreeArrow = { fg = c.green },
+	NvimTreeArrowOpen = { fg = c.green },
 
-	NvimTreeGitDirty = { fg = c.bright_red},
+	NvimTreeGitDirty = { fg = c.bright_red },
 	NvimTreeGitNew = { fg = c.bright_green },
 	NvimTreeGitDeleted = { fg = c.bright_red },
-	NvimTreeGitRenamed = { fg = c.blue},
+	NvimTreeGitRenamed = { fg = c.blue },
 	NvimTreeGitIgnored = { fg = c.purple },
-	NvimTreeGitStaged = { fg = c.light0},
-	NvimTreeGitMerge = { fg = c.green},
+	NvimTreeGitStaged = { fg = c.light0 },
+	NvimTreeGitMerge = { fg = c.green },
 	NvimTreeGitUnstaged = { fg = c.bright_red },
-	NvimTreeGitUnmerged = { fg = c.bright_red},
-  NvimTreeGitEdited = { fg = c.bright_red },
+	NvimTreeGitUnmerged = { fg = c.bright_red },
+	NvimTreeGitEdited = { fg = c.bright_red },
 
 	--See barbar.nvim
 	BufferCurrent = { bg = c.dark0, fg = c.light0 },
