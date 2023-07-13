@@ -1,7 +1,6 @@
 local c = require("gruvbox.colors")
 
 local M = {
-	--
 	--See :h highlight-groups
 	ColorColumn = { fg = c.light0 },
 	Conceal = { fg = c.light0 },
@@ -89,7 +88,7 @@ local M = {
 	Label = { fg = c.red },
 	Operator = { fg = c.bright_red },
 	Keyword = { fg = c.red },
-  KeywordFunction = { fg = c.bright_aqua },
+	KeywordFunction = { fg = c.bright_aqua },
 	Exception = { fg = c.purple },
 	PreProc = { fg = c.bright_green },
 	Include = { fg = c.bright_aqua }, -- import text color
@@ -116,9 +115,8 @@ local M = {
 	htmlEndTag = { fg = c.bright_aqua },
 	htmlString = { fg = c.bright_green },
 	htmlLink = { fg = c.bright_aqua },
-  tsxTag = { fg = c.bright_yellow},
-  tsxTagName = { fg = c.bright_yellow},
-
+	tsxTag = { fg = c.bright_yellow },
+	tsxTagName = { fg = c.bright_yellow },
 
 	--
 	--See :h lsp-highlight
@@ -178,7 +176,7 @@ local M = {
 	["@repeat"] = { link = "Repeat" },
 	["@label"] = { link = "Label" },
 	["@operator"] = { link = "Operator" },
-	["@keyword"] = { link = "Keyword" }, -- variable, export default 
+	["@keyword"] = { link = "Keyword" }, -- variable, export default
 	["@keyword.function"] = { link = "KeywordFunction" }, -- function
 	["@exception"] = { link = "Exception" },
 	["@variable"] = { fg = c.light0 },
@@ -193,7 +191,7 @@ local M = {
 	["@tag"] = { link = "Tag" },
 	["@tag.attribute"] = { link = "Attribute" },
 	["@tag.delimiter"] = { link = "Tag" },
-	--
+
 	--See :h lsp-semantic-highlight
 	["@lsp.type.class"] = { link = "Structure" },
 	["@lsp.type.decorator"] = { link = "Function" },
@@ -240,21 +238,28 @@ local M = {
 	--See h nvm-tree.nvim/lua/nvim-tree/colors.lua
 	NvimTreeFolderIcon = { fg = c.bright_green },
 	NvimTreeFolderName = { fg = c.bright_green },
+  NvimTreeFolderOpen = { fg = c.bright_green },
 	NvimTreeFolderEmpty = { fg = c.gray },
 	NvimTreeFileName = { fg = c.light0 },
-	NvimTreeArrow = { fg = c.green },
-	NvimTreeArrowOpen = { fg = c.green },
+	NvimTreeArrow = { fg = c.bright_yellow },
+	NvimTreeArrowOpen = { fg = c.bright_yellow },
+  NvimTreeOpenFolderName = { fg = c.bright_green },
+  NvimTreeOpenFolderIcon = { fg = c.bright_green },
+  NvimTreeCloseFolderName = { fg = c.bright_green },
+  NvimTreeCloseFolderIcon = { fg = c.bright_green },
+  NvimTreeImageFile = { fg = c.purple},
 
 	NvimTreeGitDirty = { fg = c.bright_red },
-	NvimTreeGitNew = { fg = c.bright_green },
+	NvimTreeGitNew = { fg = c.bright_yellow},
 	NvimTreeGitDeleted = { fg = c.bright_red },
 	NvimTreeGitRenamed = { fg = c.blue },
 	NvimTreeGitIgnored = { fg = c.purple },
 	NvimTreeGitStaged = { fg = c.light0 },
-	NvimTreeGitMerge = { fg = c.green },
+	NvimTreeGitMerge = { fg = c.light0 },
 	NvimTreeGitUnstaged = { fg = c.bright_red },
+  NvimTreeGitStaged = { fg = c.light0 },
 	NvimTreeGitUnmerged = { fg = c.bright_red },
-	NvimTreeGitEdited = { fg = c.bright_red },
+	NvimTreeGitEdited = { fg = c.blue },
 
 	--See barbar.nvim
 	BufferCurrent = { bg = c.dark0, fg = c.light0 },
@@ -271,6 +276,7 @@ local M = {
 	BufferInactiveIndex = { bg = c.dark2, fg = c.dark3 },
 	BufferInactiveMod = { bg = c.dark2, fg = c.red },
 	BufferInactiveSign = { bg = c.dark0, fg = c.light0 },
+  BufferBorder = { bg = c.dark0, fg = c.red},
 
 	--See lspsaga.nvim
 	SagaWinbarFolder = { bg = c.dark0, fg = c.yellow },
