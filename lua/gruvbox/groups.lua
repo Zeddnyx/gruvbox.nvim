@@ -105,7 +105,7 @@ local M = {
 	Debug = { fg = c.red },
 	Underline = { underline = true },
 	Error = { fg = c.red, undercurl = true },
-	Todo = { fg = c.dark0, bg = c.light0 },
+	Todo = { fg = c.dark0, bg = c.light0, bold = true },
 	Underlined = { fg = c.bright_aqua, underline = true }, -- text link html
 	Attribute = { fg = c.bright_yellow }, -- attribute html
 	Tag = { fg = c.red }, -- tag html
@@ -234,32 +234,28 @@ local M = {
 	--
 	--See :h translator-highlight
 	TranslatorBorder = { link = "FloatBorder" },
-	--
-	--See h nvm-tree.nvim/lua/nvim-tree/colors.lua
-	NvimTreeFolderIcon = { fg = c.bright_green },
-	NvimTreeFolderName = { fg = c.bright_green },
-  NvimTreeFolderOpen = { fg = c.bright_green },
-	NvimTreeFolderEmpty = { fg = c.gray },
-	NvimTreeFileName = { fg = c.light0 },
-	NvimTreeArrow = { fg = c.bright_yellow },
-	NvimTreeArrowOpen = { fg = c.bright_yellow },
-  NvimTreeOpenFolderName = { fg = c.bright_green },
-  NvimTreeOpenFolderIcon = { fg = c.bright_green },
-  NvimTreeCloseFolderName = { fg = c.bright_green },
-  NvimTreeCloseFolderIcon = { fg = c.bright_green },
-  NvimTreeImageFile = { fg = c.purple},
 
-	NvimTreeGitDirty = { fg = c.bright_red },
-	NvimTreeGitNew = { fg = c.bright_yellow},
-	NvimTreeGitDeleted = { fg = c.bright_red },
-	NvimTreeGitRenamed = { fg = c.blue },
-	NvimTreeGitIgnored = { fg = c.purple },
-	NvimTreeGitStaged = { fg = c.light0 },
-	NvimTreeGitMerge = { fg = c.light0 },
-	NvimTreeGitUnstaged = { fg = c.bright_red },
-  NvimTreeGitStaged = { fg = c.light0 },
-	NvimTreeGitUnmerged = { fg = c.bright_red },
-	NvimTreeGitEdited = { fg = c.blue },
+	--See h nvm-tree.nvim/lua/nvim-tree/colors.lua
+	-- NvimTreeFolderEmpty = { fg = c.gray },
+	-- NvimTreeFileName = { fg = c.light0 },
+	-- NvimTreeArrow = { fg = c.bright_yellow },
+	-- NvimTreeArrowOpen = { fg = c.bright_yellow },
+	--  NvimTreeOpenFolderName = { fg = c.bright_green },
+	--  NvimTreeOpenFolderIcon = { fg = c.bright_green },
+	--  NvimTreeCloseFolderName = { fg = c.bright_green },
+	--  NvimTreeCloseFolderIcon = { fg = c.bright_green },
+	NvimTreeImageFile = { fg = c.purple },
+	NvimTreeSpecialFile = { fg = c.orange, bold = true, underline = true },
+	NvimTreeExecFile = { fg = c.bright_yellow, bold = true },
+	NvimTreeOpenedFile = { fg = c.orange, bold = true },
+	NvimTreeModifiedFile = { fg = c.orange, bold = true },
+	NvimTreeFolderIcon = { fg = c.bright_yellow, bold = true },
+	NvimTreeFolderName = { fg = c.bright_yellow, bold = true },
+	NvimTreeOpenedFolderName = { fg = c.bright_yellow, bold = true },
+	NvimTreeOpenedFolderIcon = { fg = c.bright_yellow, bold = true },
+	NvimTreeClosedFolderIcon = { fg = c.bright_yellow, bold = true },
+	NvimTreeSymlinkFolderName = { fg = c.bright_yellow, bold = true },
+	NvimTreeEmptyFolderName = { fg = c.gray },
 
 	--See barbar.nvim
 	BufferCurrent = { bg = c.dark0, fg = c.light0 },
@@ -276,7 +272,7 @@ local M = {
 	BufferInactiveIndex = { bg = c.dark2, fg = c.dark3 },
 	BufferInactiveMod = { bg = c.dark2, fg = c.red },
 	BufferInactiveSign = { bg = c.dark0, fg = c.light0 },
-  BufferBorder = { bg = c.dark0, fg = c.red},
+	BufferBorder = { bg = c.dark0, fg = c.red },
 
 	--See lspsaga.nvim
 	SagaWinbarFolder = { bg = c.dark0, fg = c.yellow },
