@@ -3,18 +3,18 @@ local c = require("gruvbox.colors")
 local M = {
 	--See :h highlight-groups
 	ColorColumn = { fg = c.light0 },
-	Conceal = { fg = c.light0 },
+	Conceal = { fg = c.blue},
 	CurSearch = { bg = c.blue, fg = c.dark0 },
-	Cursor = { bg = c.light1, fg = c.dark0 },
+	Cursor = { bg = c.blue, fg = c.dark0 },
 	ICursor = { link = "Cursor" },
 	CursorIM = { link = "Cursor" },
-	CursorColumn = { bg = c.dark1 },
+	CursorColumn = { bg = c.dark2 },
 	CursorLine = { link = "CursorColumn" },
 	Directory = { fg = c.bright_green, bold = true },
-	DiffAdd = { fg = c.bright_green },
-	DiffChange = { fg = c.cyan },
-	DiffDelete = { fg = c.red },
-	DiffText = { fg = c.yellow },
+	DiffAdd = { fg = c.bright_green, bold = true },
+	DiffChange = { fg = c.cyan, bold = true },
+	DiffDelete = { fg = c.red, bold = true },
+	DiffText = { fg = c.yellow, bold = true },
 	EndOfBuffer = { link = "ColorColumn" },
 	TermCursor = { link = "Cursor" },
 	TermCursorNC = { link = "TermCursor" },
@@ -137,7 +137,7 @@ local M = {
 	DiagnosticVirtualTextWarn = { fg = c.yellow },
 	DiagnosticVirtualTextInfo = { fg = c.blue },
 	DiagnosticVirtualTextHint = { fg = c.aqua },
-	DiagnosticLineNrError = { fg = c.light0, bg = c.red },
+	DiagnosticLineNrError = { fg = c.dark0, bg = c.light0 },
 	DiagnosticLineNrWarn = { fg = c.light0, bg = c.yellow },
 	DiagnosticLineNrInfo = { fg = c.light0, bg = c.blue },
 	DiagnosticLineNrHint = { fg = c.light0, bg = c.aqua },
@@ -151,6 +151,7 @@ local M = {
 	["@text.todo"] = { link = "Todo" },
 	["@comment"] = { link = "Comment" },
 	["@punctuation"] = { link = "Delimiter" },
+	["@punctuation.bracket"] = { link = "Delimiter" },
 	["@constant"] = { link = "Constant" },
 	["@constant.builtin"] = { link = "Special" },
 	["@constant.macro"] = { link = "Define" },
@@ -219,6 +220,7 @@ local M = {
 	GitSignAdd = { link = "DiffAdd" },
 	GitSignChange = { link = "DiffChange" },
 	GitSignDelete = { link = "DiffDelete" },
+  GitSignChangeDelete = { link = "DiffText" },
 	--
 	--See telescope.nvim/plugin/telescope.lua
 	TelescopeSelection = { bg = c.dark1, fg = c.light0 },
@@ -246,7 +248,7 @@ local M = {
 	--  NvimTreeCloseFolderIcon = { fg = c.bright_green },
 	NvimTreeImageFile = { fg = c.purple },
 	NvimTreeSpecialFile = { fg = c.orange, bold = true, underline = true },
-	NvimTreeExecFile = { fg = c.bright_yellow, bold = true },
+	NvimTreeExecFile = { fg = c.bright_green, bold = true },
 	NvimTreeOpenedFile = { fg = c.orange, bold = true },
 	NvimTreeModifiedFile = { fg = c.orange, bold = true },
 	NvimTreeFolderIcon = { fg = c.bright_yellow, bold = true },
@@ -272,9 +274,9 @@ local M = {
 	BufferInactiveIndex = { bg = c.dark2, fg = c.dark3 },
 	BufferInactiveMod = { bg = c.dark2, fg = c.red },
 	BufferInactiveSign = { bg = c.dark0, fg = c.light0 },
-	BufferBorder = { bg = c.dark0, fg = c.red },
 
 	--See lspsaga.nvim
 	SagaWinbarFolder = { bg = c.dark0, fg = c.yellow },
 }
+
 return M
