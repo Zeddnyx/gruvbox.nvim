@@ -129,7 +129,7 @@ local M = {
 	DiagnosticWarn = { fg = c.yellow },
 	DiagnosticInfo = { fg = c.blue },
 	DiagnosticHint = { fg = c.bright_aqua },
-	DiagnosticSignError = { fg = c.light0 },
+	DiagnosticSignError = { fg = c.red },
 	DiagnosticSignWarn = { fg = c.yellow },
 	DiagnosticSignInfo = { fg = c.blue },
 	DiagnosticSignHint = { fg = c.aqua },
@@ -258,6 +258,7 @@ local M = {
 	NvimTreeClosedFolderIcon = { fg = c.bright_yellow, bold = true },
 	NvimTreeSymlinkFolderName = { fg = c.bright_yellow, bold = true },
 	NvimTreeEmptyFolderName = { fg = c.gray },
+
 
 	--See barbar.nvim
 	BufferCurrent = { bg = c.dark0, fg = c.light0 },
