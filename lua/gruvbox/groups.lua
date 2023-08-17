@@ -137,7 +137,7 @@ local M = {
 	DiagnosticVirtualTextWarn = { fg = c.yellow },
 	DiagnosticVirtualTextInfo = { fg = c.blue },
 	DiagnosticVirtualTextHint = { fg = c.aqua },
-	DiagnosticLineNrError = { fg = c.dark0, bg = c.light0 },
+	DiagnosticLineNrError = { fg = c.light0, bg = c.bright_red},
 	DiagnosticLineNrWarn = { fg = c.light0, bg = c.yellow },
 	DiagnosticLineNrInfo = { fg = c.light0, bg = c.blue },
 	DiagnosticLineNrHint = { fg = c.light0, bg = c.aqua },
@@ -258,6 +258,7 @@ local M = {
 	NvimTreeClosedFolderIcon = { fg = c.bright_yellow, bold = true },
 	NvimTreeSymlinkFolderName = { fg = c.bright_yellow, bold = true },
 	NvimTreeEmptyFolderName = { fg = c.gray },
+  NvimTreeOpenedEmptyFolderName = { fg = c.gray },
 
 
 	--See barbar.nvim
