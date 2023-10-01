@@ -4,7 +4,7 @@ local M = {
 	--See :h highlight-groups
 	ColorColumn = { fg = c.light0 },
 	Conceal = { fg = c.blue},
-	CurSearch = { bg = c.blue, fg = c.dark0 },
+	CurSearch = { bg = c.bright_aqua, fg = c.dark0 },
 	Cursor = { bg = c.blue, fg = c.dark0 },
 	ICursor = { link = "Cursor" },
 	CursorIM = { link = "Cursor" },
@@ -15,6 +15,7 @@ local M = {
 	DiffChange = { fg = c.cyan, bold = true },
 	DiffDelete = { fg = c.red, bold = true },
 	DiffText = { fg = c.yellow, bold = true },
+	DiffUnstaged = { fg = c.yellow, bold = true },
 	EndOfBuffer = { link = "ColorColumn" },
 	TermCursor = { link = "Cursor" },
 	TermCursorNC = { link = "TermCursor" },
@@ -31,7 +32,7 @@ local M = {
 	CursorLineNr = { link = "CursorLine" },
 	CursorLineFold = { link = "SignColumn" },
 	CursorLineSign = { link = "SignColumn" },
-	MatchParen = { bg = c.light1, underline = true },
+	MatchParen = { bg = c.dark1},
 	ModeMsg = { fg = c.light0 },
 	MsgArea = { fg = c.light0 },
 	MsgSeparator = { fg = c.light1 },
@@ -87,7 +88,7 @@ local M = {
 	Repeat = { fg = c.red },
 	Label = { fg = c.red },
 	Operator = { fg = c.bright_red },
-	Keyword = { fg = c.red },
+	Keyword = { fg = c.blue},
 	KeywordFunction = { fg = c.bright_aqua },
 	Exception = { fg = c.purple },
 	PreProc = { fg = c.bright_green },
@@ -221,6 +222,7 @@ local M = {
 	GitSignChange = { link = "DiffChange" },
 	GitSignDelete = { link = "DiffDelete" },
   GitSignChangeDelete = { link = "DiffText" },
+  GitSignUnstaged = {link = "DiffUnstaged"},
 	--
 	--See telescope.nvim/plugin/telescope.lua
 	TelescopeSelection = { bg = c.dark1, fg = c.light0 },
