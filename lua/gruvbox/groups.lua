@@ -59,7 +59,7 @@ local M = {
 	SpellCap = { link = "SpellBad" },
 	SpellLocal = { link = "SpellBad" },
 	SpellRare = { link = "SpellBad" },
-	StatusLine = { bg = c.light0, fg = c.dark0 },
+  StatusLine = { bg = c.dark0, fg = c.bright_aqua},
 	StatusLineNC = { bg = "NONE" },
 	TabLine = { bg = c.dark0, fg = c.light0 },
 	TabLineFill = { link = "TabLine" },
